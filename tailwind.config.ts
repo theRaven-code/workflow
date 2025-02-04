@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "bg-main": "var(--bg-main)",
+        "bg-card": "var(--bg-card)",
+        "text-heading": "var(--text-heading)",
+        "text-body": "var(--text-body)",
+        "accent-primary": "var(--accent-primary)",
       },
     },
   },
