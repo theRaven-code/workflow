@@ -27,3 +27,73 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes slide-in-out {
+  0%,
+  100% {
+    transform: translateX(0) scale(0.95);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateX(10%) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-out-delayed {
+  0%,
+  100% {
+    transform: translateX(0) scale(0.95);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateX(-10%) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes loiter-first {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(8px, -8px) rotate(1deg) scale(1.02);
+  }
+  66% {
+    transform: translate(-5px, 5px) rotate(-0.5deg) scale(0.98);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes loiter-second {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.98);
+  }
+  33% {
+    transform: translate(-8px, -5px) rotate(-1deg) scale(1);
+  }
+  66% {
+    transform: translate(5px, 8px) rotate(0.5deg) scale(1.02);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(0.98);
+  }
+}
+
+.animate-slide-in-out {
+  animation: slide-in-out 15s ease-in-out infinite alternate-reverse;
+}
+
+.animate-slide-in-out-delayed {
+  animation: slide-in-out-delayed 15s ease-in-out infinite alternate-reverse;
+}
+
+.animate-loiter-first {
+  animation: loiter-first 12s ease-in-out infinite;
+}
+
+.animate-loiter-second {
+  animation: loiter-second 12s ease-in-out infinite;
+}
